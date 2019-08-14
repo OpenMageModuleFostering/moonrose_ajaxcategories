@@ -1,0 +1,43 @@
+<script src="<?php echo $this->getSkinUrl('js/jquery-1.9.1.min.js'); ?>"></script>
+<script language="javascript" type="text/javascript">
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+		jQuery(document).on("change", ".change", function(){ 
+			var closestdiv = jQuery(this).closest('div');
+			var cid = jQuery(this).val();
+			 var BASE_URL = '<?php echo $this->getBaseUrl(); ?>';
+			 if(cid!=0){
+				jQuery.post(BASE_URL+"/ajaxcategories/?cId="+cid,'',function(data){
+					if(data.url!=""){
+						jQuery('.ajax_loading_text').html('Loading....');
+						document.location.href=data.url;
+					} 
+					closestdiv.nextAll('div.inner_options').remove();
+					closestdiv.after(data.opt);
+				},"json");
+			}else{
+				closestdiv.nextAll('div.inner_options').remove();
+			}	
+		});
+	});
+	jQuery.noConflict();
+</script>
+<?php
+$_category  = $this->getCurrentCategory();
+$rootcat = $_category->entity_id;
+$cat = Mage::getModel('catalog/category')->load($rootcat);
+$child = $cat->getChildrenCategories();
+
+if(!empty($child)):
+	echo '<div class="main_option_box">
+			<h1>'.$this->__("Find Categories").'
+			<div class="optionbox">	
+				<select id="categorybox_'.$rootcat.'" class="change">
+					<option value="0">Select Option</option>
+					'.Mage::getModel('ajaxcategories/categories')->get_categoriesStructure($child).'	
+				</select>
+			</div>
+			<div class="ajax_loading_text"></div>
+		</div>';
+endif;
+?>

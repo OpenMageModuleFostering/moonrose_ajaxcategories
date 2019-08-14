@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Moonrose_Ajaxcategories>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Moonrose_Ajaxcategories>
+    </modules>
+</config> 
