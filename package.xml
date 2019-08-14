@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+    <name>Moonrose_Ajaxcategories</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Ajax Category/Subcategory Combo extension by MoonRose Infotech</summary>
+    <description>1) This extension contains all categories display as combo&#xD;
+2) If selected category has subcategory then new ajax based combo will added&#xD;
+3) Second step will be repeat until subcategories found&#xD;
+4) If selected category/subcategory don't have subcategory it will redirected to the product listing page&#xD;
+5) Extension is working for root category as well as for subcategory page&#xD;
+6) Block can be added for static content page as:&#xD;
+{{block type="ajaxcategories/list" name="ajax_categories" template="ajaxcategories/list.phtml" }}</description>
+    <notes>Ajax Category Extension Stable Release by MoonRose Infotech</notes>
+    <authors><author><name>MoonRose Infotech</name><user>moonroseinfo</user><email>moonroseinfotech@gmail.com</email></author></authors>
+    <date>2014-05-07</date>
+    <time>06:09:43</time>
+    <contents><target name="mageskin"><dir name="skin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="js"><file name="jquery-1.9.1.min.js" hash=""/></dir></dir></dir></dir></dir></target><target name="magecore"><dir name="app"><dir name="etc"><dir name="modules"><file name="Moonrose_Ajaxcategories.xml" hash=""/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

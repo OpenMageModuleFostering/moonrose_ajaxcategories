@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Moonrose_Ajaxcategories",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Ajax Category/Subcategory Combo extension by MoonRose Infotech",
+    "authors": [
+    {
+        "name": "MoonRose Infotech",
+        "email": "moonroseinfotech@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
