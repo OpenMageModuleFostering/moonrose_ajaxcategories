@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Moonrose_Ajaxcategories",
+    "name": "openmage-module-fostering\/moonrose_ajaxcategories",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Ajax Category\/Subcategory Combo extension by MoonRose Infotech",
     "authors": [
